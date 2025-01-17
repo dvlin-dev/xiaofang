@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://heyxiaofang.com/sitemap-index.xml

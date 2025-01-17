@@ -1,0 +1,80 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import PricingCard from "@components/pricing.astro";
+
+const pricing = [
+  {
+    name: "Basic",
+    price: "Free",
+    popular: false,
+    features: [
+      "Basic conversation",
+      "Health tracking",
+      "Chat history (7 days)",
+      "Web browsing",
+      "Basic health insights",
+      "Community support",
+    ],
+    button: {
+      text: "Start Free",
+      link: "/",
+    },
+  },
+  {
+    name: "Pro",
+    price: {
+      monthly: "$19",
+      annual: "$16",
+      discount: "15%",
+      original: "$24",
+    },
+    popular: true,
+    features: [
+      "All Basic features",
+      "Unlimited chat history",
+      "Detailed health analytics",
+      "Custom health goals",
+      "Priority response",
+      "Email support",
+    ],
+    button: {
+      text: "Go Pro",
+      link: "#",
+    },
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    popular: false,
+    features: [
+      "All Pro features",
+      "Custom AI training",
+      "API access",
+      "Advanced analytics",
+      "Dedicated account manager",
+      "24/7 priority support",
+    ],
+    button: {
+      text: "Contact us",
+      link: "/contact",
+    },
+  },
+];
+---
+
+<Layout title="Xiaofang Pricing">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Simple Pricing</Fragment>
+      <Fragment slot="desc">
+        Choose the perfect plan for your AI companion journey
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <PricingCard plan={item} />)}
+    </div>
+  </Container>
+</Layout>

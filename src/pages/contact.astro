@@ -1,0 +1,45 @@
+---
+import Contactform from "@components/contactform.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout title="Contact">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Contact</Fragment>
+      <Fragment slot="desc">We're here to assist you with Xiaofang AI companion.</Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h2 class="font-medium text-2xl text-gray-800">Get in Touch</h2>
+        <p class="text-lg leading-relaxed text-slate-500 mt-3">
+          Have questions about Xiaofang AI companion? We're here to help. Whether you need technical support
+          or want to learn more about how Xiaofang can help track your health and be your digital companion,
+          feel free to reach out.
+        </p>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+            <span>San Francisco, CA</span>
+          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
+              href="mailto:support@heyxiaofang.com"
+              >support@heyxiaofang.com</a
+            >
+          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
+              href="tel:+1 (415) 555-0123">+1 (415) 555-0123</a
+            >
+          </div>
+        </div>
+      </div>
+      <div>
+        <Contactform />
+      </div>
+    </div>
+  </Container>
+</Layout>

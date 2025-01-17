@@ -1,0 +1,69 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "AI Companion",
+    description:
+      "Xiaofang is your personal AI companion who remembers your conversations and builds a genuine connection with you.",
+    icon: "bx:bxs-heart",
+  },
+  {
+    title: "Health Monitoring",
+    description:
+      "Track and analyze your health information with Xiaofang's intelligent health monitoring capabilities.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "Memory System",
+    description:
+      "Xiaofang remembers your conversations and preferences, creating a more personalized experience over time.",
+    icon: "bx:bxs-brain",
+  },
+  {
+    title: "Internet Connected",
+    description:
+      "Access real-time information and stay updated with Xiaofang's ability to connect to the internet for the latest data.",
+    icon: "bx:bxs-network-chart",
+  },
+  {
+    title: "Multi-lingual Support",
+    description:
+      "Communicate effortlessly with Xiaofang in English and other languages for a natural conversation experience.",
+    icon: "bx:bxs-message-rounded-dots",
+  },
+  {
+    title: "24/7 Availability",
+    description:
+      "Your AI companion is always there when you need someone to talk to, providing support and companionship around the clock.",
+    icon: "bx:bxs-time-five",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Your Personal AI Companion
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Meet Xiaofang, an intelligent AI companion that understands, remembers, and grows with you.
+    Experience a new level of digital companionship.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
